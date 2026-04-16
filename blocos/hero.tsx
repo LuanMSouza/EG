@@ -1,4 +1,5 @@
 import { quicksand } from "@/app/layout";
+import Image from "next/image";
 
 // Apenas um guia rápido da estrutura de cores e layout
 export default function Hero() {
@@ -8,9 +9,9 @@ export default function Hero() {
             <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-pink-primary/10">
                 <div className="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
                     {/* Versão Texto do Logo para a Navbar (Leve) */}
-                    <span className={`${quicksand.className} text-xl tracking-tighter text-pink-primary`}>
+                    <h1 className={`${quicksand.className} text-xl tracking-tighter text-pink-primary`}>
                         Érika Golegã
-                    </span>
+                    </h1>
 
                     {/* Links de Navegação */}
                     <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
@@ -36,8 +37,12 @@ export default function Hero() {
             {/* Hero Section */}
             <section className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-12">
                 <div className="flex-1 flex flex-col items-center">
-                    {/* Logo dela aqui */}
-                    <img src="/Logo.jpeg" alt="Logo" className="w-80 mb-6 border border-gray-200 rounded-3xl shadow shadow-white" />
+                    <Image
+                        priority
+                        height={500}
+                        width={500}
+                        src="/Logo.webp"
+                        alt="Logo" className="w-80 mb-6 border border-gray-200 rounded-3xl shadow shadow-white" />
                     <p className="text-lg text-gray-600 mb-8">
                         Detalhes que encantam, camadas que contam histórias.
                         Personalizados de luxo para festas exclusivas na Baixada Santista.
@@ -50,7 +55,12 @@ export default function Hero() {
                 <div className="flex-1">
                     {/* Foto do produto premium */}
                     <div className="relative">
-                        <img src="/produto-main.png" className="rounded-[40px] shadow-2xl border-8 border-white" />
+                        <Image
+                            alt="Produto em destaque"
+                            height={600}
+                            width={600}
+                            src="/produto-main.webp"
+                            className="rounded-[40px] shadow-2xl border-8 border-white" />
                         <div className="absolute -bottom-5 -left-5 bg-white p-4 rounded-2xl shadow-lg">
                             <span className="text-sm font-bold">✨ 100% Feito à Mão</span>
                         </div>

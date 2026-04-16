@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://egpersonalizados.com.br/sitemap.xml
