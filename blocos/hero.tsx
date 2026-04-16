@@ -6,7 +6,7 @@ export default function Hero() {
     return (
         <main className="bg-[#FDF2F5] min-h-screen text-[#D94685]">
 
-            <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-pink-primary/10">
+            <div className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-pink-primary/10">
                 <div className="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
                     {/* Versão Texto do Logo para a Navbar (Leve) */}
                     <h1 className={`${quicksand.className} text-xl tracking-tighter text-pink-primary`}>
@@ -14,7 +14,7 @@ export default function Hero() {
                     </h1>
 
                     {/* Links de Navegação */}
-                    <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+                    <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
                         <a href="#" className="hover:text-pink-primary transition-colors">Início</a>
                         <a href="#diferencial" className="hover:text-pink-primary transition-colors">Qualidade</a>
                         <a href="#encomenda" className="hover:text-pink-primary transition-colors">Como pedir</a>
@@ -29,7 +29,7 @@ export default function Hero() {
                         Instagram
                     </a>
                 </div>
-            </nav>
+            </div>
 
             <div className="p-8 ">
             </div>
@@ -39,11 +39,13 @@ export default function Hero() {
                 <div className="flex-1 flex flex-col items-center">
                     <Image
                         priority
-                        height={500}
-                        width={500}
                         src="/Logo.webp"
-                        alt="Logo" className="w-80 mb-6 border border-gray-200 rounded-3xl shadow shadow-white" />
-                    <p className="text-lg text-gray-600 mb-8">
+                        alt="Logo Érika Golegã"
+                        width={320} // Correspondente ao w-80 (80 * 4px)
+                        height={160} // Ajuste conforme a altura real da sua imagem
+                        className="mb-6 border border-gray-200 rounded-3xl shadow shadow-white"
+                    />
+                    <p className="text-lg text-gray-700 mb-8">
                         Detalhes que encantam, camadas que contam histórias.
                         Personalizados de luxo para festas exclusivas na Baixada Santista.
                     </p>
@@ -56,6 +58,7 @@ export default function Hero() {
                     {/* Foto do produto premium */}
                     <div className="relative">
                         <Image
+                            priority
                             alt="Produto em destaque"
                             height={600}
                             width={600}
