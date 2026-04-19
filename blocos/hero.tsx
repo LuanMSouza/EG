@@ -39,11 +39,11 @@ export default function Hero() {
                 <div className="flex-1 flex flex-col items-center">
                     <Image
                         priority
-                        src="/Logo.webp"
+                        src="/newLogo.webp"
                         alt="Logo Érika Golegã"
                         width={320} // Correspondente ao w-80 (80 * 4px)
                         height={160} // Ajuste conforme a altura real da sua imagem
-                        className="mb-6 border border-gray-200 rounded-3xl shadow shadow-white"
+                        className="mb-6 border border-gray-200 rounded-full shadow shadow-white"
                     />
                     <p className="text-lg text-gray-700 mb-8">
                         Detalhes que encantam, camadas que contam histórias.
@@ -62,7 +62,7 @@ export default function Hero() {
                             alt="Produto em destaque"
                             height={600}
                             width={600}
-                            src="/produto-main.webp"
+                            src="/newProduto-main.webp"
                             className="rounded-[40px] shadow-2xl border-8 border-white" />
                         <div className="absolute -bottom-5 -left-5 bg-white p-4 rounded-2xl shadow-lg">
                             <span className="text-sm font-bold">✨ 100% Feito à Mão</span>

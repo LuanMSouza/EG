@@ -16,7 +16,7 @@ export default function Vitrine() {
                             height={400}
                             width={400}
                             alt="Caixa Piramide personalizada para festas, tema - Bob Esponja"
-                            src="/produtos/piramide.webp" className="rounded-[28px] w-full h-80 object-cover" />
+                            src="/produtos/newPiramide.webp" className="rounded-[28px] w-full h-80 object-cover" />
                         <div className="p-4 text-center">
                             <h3 className="font-semibold text-lg">Caixas Pirâmide</h3>
                         </div>
@@ -30,7 +30,7 @@ export default function Vitrine() {
                             alt="Caixa Milk personalizada para festas, tema - Bob Esponja"
                             height={400}
                             width={400}
-                            src="/produtos/milk2.webp" className="rounded-[28px] w-full h-80 object-cover" />
+                            src="/produtos/newMilk.webp" className="rounded-[28px] w-full h-80 object-cover" />
 
                         <div className="p-4 text-center">
                             <h3 className="font-semibold text-lg">Caixa Milk tradicional</h3>
@@ -45,7 +45,7 @@ export default function Vitrine() {
                             alt="Caixa bala vertical personalizada para festas, tema - Bob Esponja"
                             height={400}
                             width={400}
-                            src="/produtos/bala.webp" className="rounded-[28px] w-full h-80 object-cover" />
+                            src="/produtos/newBala.webp" className="rounded-[28px] w-full h-80 object-cover" />
                         <div className="p-4 text-center">
                             <h3 className="font-semibold text-lg">Caixa Bala Vertical</h3>
                         </div>
