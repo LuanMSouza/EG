@@ -1,4 +1,5 @@
 import { quicksand } from "@/app/layout";
+import { Slideshow } from "@/componentes/framemotion";
 import Image from "next/image";
 
 // Apenas um guia rápido da estrutura de cores e layout
@@ -54,19 +55,10 @@ export default function Hero() {
                     </a>
                 </div>
 
-                <div className="flex-1">
-                    {/* Foto do produto premium */}
-                    <div className="relative">
-                        <Image
-                            priority
-                            alt="Produto em destaque"
-                            height={600}
-                            width={600}
-                            src="/newProduto-main.webp"
-                            className="rounded-[40px] shadow-2xl border-8 border-white" />
-                        <div className="absolute -bottom-5 -left-5 bg-white p-4 rounded-2xl shadow-lg">
-                            <span className="text-sm font-bold">✨ 100% Feito à Mão</span>
-                        </div>
+
+                <div className="flex-1 w-full flex justify-center items-center">
+                    <div className="w-full max-w-[600px]">
+                        <Slideshow />
                     </div>
                 </div>
             </section>
