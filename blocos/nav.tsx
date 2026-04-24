@@ -1,20 +1,22 @@
 import { quicksand } from "@/app/layout";
+import Link from 'next/link';
 
 export function Nav() {
     return (
         <nav>
             <div className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-pink-primary/10">
                 <div className="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
-                    {/* Versão Texto do Logo para a Navbar (Leve) */}
-                    <h1 className={`${quicksand.className} text-xl tracking-tighter text-pink-primary`}>
-                        Érika Golegã
-                    </h1>
+                    <Link href="/">
+                        <h1 className={`${quicksand.className} text-xl tracking-tighter text-pink-primary cursor-pointer`}>
+                            Érika Golegã
+                        </h1>
+                    </Link>
 
                     {/* Links de Navegação */}
                     <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
-                        <a href="#" className="hover:text-pink-primary transition-colors">Início</a>
-                        <a href="#diferencial" className="hover:text-pink-primary transition-colors">Qualidade</a>
-                        <a href="#encomenda" className="hover:text-pink-primary transition-colors">Como pedir</a>
+                        <a href="/" className="hover:text-pink-primary transition-colors">Início</a>
+                        <a href="/#diferencial" className="hover:text-pink-primary transition-colors">Qualidade</a>
+                        <a href="/#encomenda" className="hover:text-pink-primary transition-colors">Como pedir</a>
                     </div>
 
                     {/* CTA Principal */}
