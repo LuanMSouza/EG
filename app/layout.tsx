@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Quicksand } from 'next/font/google'
+import { Nav } from "@/blocos/nav";
 
 export const quicksand = Quicksand({
   subsets: ['latin'],
@@ -70,6 +71,7 @@ export default function RootLayout({
       className={` h-full antialiased`}
     >
       <body className={`${quicksand.className} min-h-full flex flex-col`}>
+        <Nav />
         {children}
       </body>
     </html>
