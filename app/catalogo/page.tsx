@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { getImagens, getProdutos, getTemas } from "./actions";
+import Loading from "@/componentes/loading";
 
 type Imagem = {
   id: number;
@@ -32,6 +33,9 @@ export default function Catalogo() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
 
   const pegarDados = async () => {
+
+    setLoading(true)
+
     const resImagens = await getImagens()
     const resTemas = await getTemas();
     const resProdutos = await getProdutos();
@@ -39,6 +43,8 @@ export default function Catalogo() {
     setImagens(resImagens);
     setTemas(resTemas);
     setProdutos(resProdutos);
+
+    setLoading(false)
   }
 
   useEffect(() => {
@@ -54,12 +60,14 @@ export default function Catalogo() {
     return matchTema && matchProd && matchBusca;
   });
 
+  const [loading, setLoading] = useState(true)
+
   return (
     <div>
       <h2 className="text-4xl text-center mt-5">Catálogo</h2>
 
       {/* filtros */}
-      <div className="grid grid-cols-1 w-[70%] sm:w-[300px] mx-auto mt-5 gap-5">
+      <div className="grid grid-cols-1 w-[70%] sm:w-75 mx-auto mt-5 gap-5">
         <label>Produto
           <select
             className="w-full px-3 py-1 rounded-2xl border border-gray-400"
@@ -112,7 +120,7 @@ export default function Catalogo() {
       </p>
 
       {/* Catalogo */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 w-[90%] mx-auto mx-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 w-[90%] mx-auto">
 
         {produtosFiltrados.map((produto) => (
 
@@ -127,6 +135,8 @@ export default function Catalogo() {
 
       </div>
 
+
+      <Loading ativo={loading} />
     </div>
   )
 }

@@ -26,10 +26,10 @@ export function Slideshow() {
 
     return (
         /* Container externo com largura máxima */
-        <div className="relative w-full max-w-[600px] mx-auto block">
+        <div className="relative w-full max-w-150 mx-auto block">
             
             {/* O SEGREDO: pb-[100%] força a altura a ser igual a largura sempre */}
-            <div className="relative w-full pb-[100%] rounded-[30px] md:rounded-[40px] shadow-2xl border-4 md:border-8 border-white overflow-hidden bg-gray-50">
+            <div className="relative w-full pb-[100%] rounded-[30px] md:rounded-3xl shadow-2xl border-4 md:border-8 border-white overflow-hidden bg-gray-50">
 
                 <AnimatePresence mode="wait">
                     <motion.div
