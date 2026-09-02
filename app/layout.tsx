@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Quicksand } from 'next/font/google'
+import { quicksand } from "@/lib/fonts";
 import { Nav } from "@/blocos/nav";
-
-export const quicksand = Quicksand({
-  subsets: ['latin'],
-  weight: ['300', '500', '700'] // O '300' é o segredo para ser leve
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://egpersonalizados.com.br'), // Importante para as imagens funcionarem

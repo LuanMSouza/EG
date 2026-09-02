@@ -1,3 +1,5 @@
+const WHATSAPP_NUMERO = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+
 export default function Instrucoes() {
     return (
         <section id="encomenda" className="max-w-5xl mx-auto px-6 py-24 bg-white/30 rounded-[60px] my-12">
@@ -50,7 +52,7 @@ export default function Instrucoes() {
             <div className="mt-20 text-center">
                 <div className="inline-block p-1 rounded-full bg-gradient-to-r from-pink-primary to-orange-pastel">
                     <a
-                        href="https://wa.me/5513997544393?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20ser%20atendido%20por%20aqui!!"
+                        href={`https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent('Olá, vim do site e gostaria de ser atendido por aqui!!')}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cursor-pointer px-10 py-4 bg-white rounded-full text-pink-primary font-bold hover:bg-transparent hover:text-white transition-all inline-block"

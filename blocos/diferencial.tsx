@@ -1,4 +1,4 @@
-import { quicksand } from "@/app/layout";
+import { quicksand } from "@/lib/fonts";
 
 export default function Diferencial() {
     return (

@@ -1,4 +1,4 @@
-import { quicksand } from "@/app/layout";
+import { quicksand } from "@/lib/fonts";
 import Image from "next/image";
 
 export default function Vitrine() {

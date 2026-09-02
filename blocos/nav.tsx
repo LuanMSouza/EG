@@ -1,4 +1,4 @@
-import { quicksand } from "@/app/layout";
+import { quicksand } from "@/lib/fonts";
 import Link from 'next/link';
 
 export function Nav() {

@@ -1,4 +1,4 @@
-import { quicksand } from "@/app/layout";
+import { quicksand } from "@/lib/fonts";
 import { Slideshow } from "@/componentes/framemotion";
 import Image from "next/image";
 

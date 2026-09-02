@@ -2,21 +2,28 @@
 
 import { pool } from '@/lib/db';
 
-export async function getProdutos() {
-    const produtos = await pool.query('SELECT id, nome FROM produtos');
-    return produtos.rows;
+export type ProdutoCatalogo = {
+    id: number;
+    nome: string;
+    preco: number;
+    obs: string | null;
+    descricao: string | null;
+    imagens: string[];
 }
 
-export async function getImagens() {
-    const imagens = await pool.query(`
-        SELECT i.id,
-        p.nome AS produto,
-        p.preco_venda AS preco,
-        p.obs AS obs,
-        i.img_url AS img
-        FROM imagens i
-        JOIN produtos p ON i.produto_id = p.id
+export async function getCatalogo(): Promise<ProdutoCatalogo[]> {
+    const { rows } = await pool.query(`
+        SELECT
+            p.id,
+            p.nome,
+            p.preco_venda AS preco,
+            p.obs,
+            p.descricao,
+            array_agg(i.img_url ORDER BY i.id) AS imagens
+        FROM produtos p
+        JOIN imagens i ON i.produto_id = p.id
+        GROUP BY p.id
+        ORDER BY p.nome
     `);
-    return imagens.rows;
+    return rows;
 }
-
